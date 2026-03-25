@@ -8,14 +8,8 @@
 function Home() {
   return (
     <>
-      {/* <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Footer /> */}
     </>
-  );
+  )
 }
 
 export default Home;
