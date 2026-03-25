@@ -1,0 +1,122 @@
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* VARIABLES */
+:root {
+  --bg: #0a0a0a;
+  --fg: #f0ede8;
+  --accent: #d4f57a;
+  --accent2: #307541;
+}
+
+/* BASE */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* GRAIN */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+  opacity: .55;
+
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+
+  mix-blend-mode: overlay;
+}
+
+/* BLOBS BASE */
+.blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.18;
+
+  /* 🔥 IMPORTANTE */
+  will-change: transform;
+}
+
+/* BLOB 1 */
+.blob-1 {
+  width: 600px;
+  height: 600px;
+  background: var(--accent);
+  top: -200px;
+  right: -150px;
+
+  animation: drift1 18s ease-in-out infinite;
+}
+
+/* BLOB 2 */
+.blob-2 {
+  width: 500px;
+  height: 500px;
+  background: var(--accent2);
+  bottom: 10%;
+  left: -150px;
+
+  animation: drift2 22s ease-in-out infinite;
+}
+
+/* ANIMAÇÕES DIFERENTES (CHAVE DO REALISMO) */
+@keyframes drift1 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(40px, 60px) scale(1.05);
+  }
+  50% {
+    transform: translate(-30px, 80px) scale(1.1);
+  }
+  75% {
+    transform: translate(-50px, 30px) scale(1.03);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes drift2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(-30px, -40px) scale(1.04);
+  }
+  50% {
+    transform: translate(20px, -60px) scale(1.08);
+  }
+  75% {
+    transform: translate(50px, -20px) scale(1.02);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* CONTENT LAYER */
+section {
+  position: relative;
+  z-index: 1;
+}
