@@ -1,0 +1,97 @@
+.heroContainer {
+    position: relative; z-index: 1;
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    padding: 75px 30px 80px;
+}
+
+.heroTag {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-bottom: 32px;
+  margin-top: 1rem;
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);  /* ← borda visível */
+  border-radius: 100px;
+  width: fit-content;
+  font-size: .65rem; font-weight: 500; letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.356);              /* ← texto cinza */
+  opacity: 0; animation: fadeUp .7s .2s forwards;
+}
+
+.heroTag::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent); display: block;
+  box-shadow: 0 0 8px var(--accent);
+  animation: pulse 2s infinite;
+}
+
+.heroBottom {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  margin-top: 60px;
+  opacity: 0; animation: fadeUp .7s .7s forwards;
+  font-weight: 200;
+}
+
+.heroDesc {
+  max-width: 340px;
+  color: rgb(108, 109, 110);
+}
+
+.heroScroll {
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  color: var(--muted);
+  font-size: .72rem; letter-spacing: .1em; text-transform: uppercase;
+}
+
+.heroScrollLine {
+  width: 1px; height: 60px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+  0%,100% { height: 60px; opacity: 1; }
+  50%      { height: 30px; opacity: .4; }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: .3; }
+}
+
+/* ✅ Esse estava faltando fora do comentário */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.titulo {
+    font-size: 4.2rem;
+    line-height: 0.95;
+    text-align: left;
+    letter-spacing: -.04em;
+}
+
+.nome {
+    font-size: 4.2rem;
+    line-height: 0.95;
+    text-align: left;
+    letter-spacing: -.04em;
+    color: var(--accent);
+    font-style: italic;
+}
+
+.cargo {
+    font-size: 3.5rem;
+    line-height: 0.95;
+    text-align: left;
+    letter-spacing: -.04em;
+    color: rgba(250, 250, 250, 0.322);
+}
+
+.experiencia {
+    color: rgba(149, 153, 132, 0.822);
+    font-weight: 500;
+    width: fit-content;
+}

@@ -1,3 +1,4 @@
+import Navbar from './Navbar';
 import styles from '../styles/Hero.module.css'
 
 function Hero() {
@@ -5,30 +6,34 @@ function Hero() {
         <div className={styles.heroContainer}>
             <section className={styles.heroContent}>
 
-                <p className={styles.disponivel}>
-                <span aria-hidden="true">●</span> Disponível para novos projetos
-                </p>
+                <Navbar />
 
-                <h1 className={styles.titulo}>
-                    Olá, eu me chamo  <span className={styles.nome}>Pedro</span> 
-                </h1>
+                <div className={styles.heroTag}>Disponível para novos projetos</div>
 
-                <h2 className={styles.cargo}>Dev Fullstack.</h2>
+                <div className={styles.titleHeroContainer}>
 
-                <p className={styles.descricao}>
-                    Construo  <span className={styles.experiencia}>experiências digitais</span>
-                    que unem design e código. Focado em criar sistemas escaláveis
-                    e de alta performance, com uma abordagem centrada no usuário.
-                </p>
 
-                <div className="carouselTechList">
-                    <ul className={styles.techList}>
-                        <li>React</li>
-                        <li>Node.js</li>
-                        <li>PostgreSQL</li>
-                        <li>Express</li>
-                        <li>TypeScript</li>
-                    </ul>
+                    <h1 className={styles.titulo}>
+                        Olá, eu me <br /> chamo  <span className={styles.nome}>Pedro</span> 
+                    </h1>
+
+                    <h2 className={styles.cargo}>Dev Fullstack.</h2>
+
+                </div>
+
+                <div className={styles.heroBottom}>
+
+                    <p className={styles.heroDesc}>
+                        Construo  <span className={styles.experiencia}>experiências digitais </span>
+                        que unem design e código. Focado em criar sistemas escaláveis
+                        e de alta performance, com uma abordagem centrada no usuário.
+                    </p>
+
+                    <div className={styles.heroScroll}>
+                        <div className={styles.heroScrollLine} />
+                        <span>Scroll</span>
+                    </div>
+
                 </div>
 
             </section>

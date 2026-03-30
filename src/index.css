@@ -5,6 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Sora", sans-serif;
 }
 
 /* VARIABLES */
@@ -80,39 +81,13 @@ body::before {
 
 /* ANIMAÇÕES DIFERENTES (CHAVE DO REALISMO) */
 @keyframes drift1 {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-  25% {
-    transform: translate(40px, 60px) scale(1.05);
-  }
-  50% {
-    transform: translate(-30px, 80px) scale(1.1);
-  }
-  75% {
-    transform: translate(-50px, 30px) scale(1.03);
-  }
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(40px) scale(1.05); }
 }
 
 @keyframes drift2 {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-  25% {
-    transform: translate(-30px, -40px) scale(1.04);
-  }
-  50% {
-    transform: translate(20px, -60px) scale(1.08);
-  }
-  75% {
-    transform: translate(50px, -20px) scale(1.02);
-  }
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(40px) scale(1.05); }
 }
 
 /* CONTENT LAYER */
@@ -120,3 +95,4 @@ section {
   position: relative;
   z-index: 1;
 }
+
