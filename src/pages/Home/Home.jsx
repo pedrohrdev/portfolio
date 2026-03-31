@@ -1,5 +1,6 @@
 import Hero from '../../components/Hero';
 import Marquee from '../../components/Marquee';
+import Contato from '../../components/Contato';
 
 function Home() {
   return (
@@ -8,6 +9,8 @@ function Home() {
       <Hero />
 
       <Marquee />
+
+      <Contato />
 
     </>
   )

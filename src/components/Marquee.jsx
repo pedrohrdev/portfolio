@@ -1,8 +1,7 @@
 import styles from '../styles/Marquee.module.css';
 
 const items = [
-  'Node.js', 'TypeScript', 'PostgreSQL', 'React', 'Next.js',
-  'Figma', 'Tailwind CSS',
+  'Node.js', 'TypeScript', 'PostgreSQL', 'React', 'Next.js'
 ];
 
 function MarqueeGroup() {
