@@ -40,6 +40,29 @@ function Contato() {
 
                     </div>
 
+                    <div className={styles.contatoForm}>
+
+                        <div className={styles.formGroup}>
+                            <label htmlFor="nome">NOME</label>
+                            <input type="text" id="nome" placeholder="Seu nome" />
+                        </div>
+
+                        <div className={styles.formGroup}>
+                            <label htmlFor="email">EMAIL</label>
+                            <input type="email" id="email" placeholder="seu@email.com" />
+                        </div>
+
+                        <div className={styles.formGroup}>
+                            <label htmlFor="mensagem">MENSAGEM</label>
+                            <textarea id="mensagem" placeholder="Conta sobre seu projeto..." rows={5} />
+                        </div>
+
+                        <button className={styles.submitBtn} type="button">
+                            Enviar mensagem →
+                        </button>
+
+                    </div>
+
                 </div>
 
             </div>            
