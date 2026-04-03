@@ -95,3 +95,92 @@
     font-weight: 500;
     width: fit-content;
 }
+/* ── 768px – tablet ── */
+@media (min-width: 768px) {
+  .heroContainer {
+    padding: 90px 48px 80px;
+  }
+
+  .titulo,
+  .nome {
+    font-size: 6rem;
+  }
+
+  .cargo {
+    font-size: 5rem;
+  }
+
+  .heroDesc {
+    max-width: 420px;
+  }
+}
+
+/* ── 1024px – laptop ── */
+@media (min-width: 1024px) {
+  .heroContainer {
+    padding: 100px 64px 80px;
+    justify-content: space-between;
+  }
+
+  .titulo,
+  .nome {
+    font-size: 7.5rem;
+  }
+
+  .cargo {
+    font-size: 6.2rem;
+  }
+
+  .heroBottom {
+    margin-top: auto;
+  }
+
+  .heroDesc {
+    max-width: 480px;
+    font-size: 1rem;
+  }
+}
+
+/* ── 1440px – desktop ── */
+@media (min-width: 1440px) {
+  .heroContainer {
+    padding: 110px 96px 96px;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .titulo,
+  .nome {
+    font-size: 9.5rem;
+  }
+
+  .cargo {
+    font-size: 8rem;
+  }
+
+  .heroDesc {
+    max-width: 540px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .heroBottom {
+    margin-top: auto;
+  }
+}
+
+/* ── 1920px – wide ── */
+@media (min-width: 1920px) {
+  .heroContainer {
+    padding: 120px 120px 110px;
+  }
+
+  .titulo,
+  .nome {
+    font-size: 11rem;
+  }
+
+  .cargo {
+    font-size: 9.2rem;
+  }
+}

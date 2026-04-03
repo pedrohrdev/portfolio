@@ -2,6 +2,7 @@ import Navbar from './Navbar';
 import styles from '../styles/Hero.module.css'
 
 function Hero() {
+
     return (
         <div className={styles.heroContainer}>
             <section className={styles.heroContent}>
@@ -9,6 +10,7 @@ function Hero() {
                 <Navbar />
 
                 <div className={styles.heroTag}>Disponível para novos projetos</div>
+
 
                 <div className={styles.titleHeroContainer}>
 

@@ -138,3 +138,9 @@
 .submitBtn:active {
     transform: scale(0.98);
 }
+
+.contatoDescription {
+    margin-top: 2rem;
+    color: rgb(143, 143, 141);
+    line-height: 1.4;
+}

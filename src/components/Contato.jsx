@@ -14,7 +14,7 @@ function Contato() {
 
                     <h2>Vamos <span className={styles.highlight}>trabalhar juntos.</span></h2>
 
-                    <p>Aberto para projetos freelance e oportunidades de trabalho.</p>
+                    <p className={styles.contatoDescription}>Aberto para projetos freelance e oportunidades de trabalho.</p>
 
                     <div className={styles.contatoLinks}>
 
