@@ -1,74 +1,45 @@
 .marqueeContainer {
   width: 100%;
   overflow: hidden;
-  background-color: transparent;
-  padding: 18px 0;
-  position: relative;
-}
-
-/* Fade nas bordas */
-.marqueeContainer::before,
-.marqueeContainer::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 80px;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.marqueeContainer::before {
-  left: 0;
-  background: linear-gradient(to right, #0a0a0a, transparent);
-}
-
-.marqueeContainer::after {
-  right: 0;
-  background: linear-gradient(to left, #0a0a0a, transparent);
 }
 
 .marqueeTrack {
   display: flex;
   width: max-content;
-  animation: marquee 30s linear infinite;
-}
-
-.marqueeTrack:hover {
-  animation-play-state: paused;
+  animation: marquee 25s linear infinite;
+  will-change: transform;
 }
 
 .marqueeGroup {
   display: flex;
   align-items: center;
-  gap: 0;
   flex-shrink: 0;
+  /* Garante que cada grupo tenha largura mínima maior que qualquer tela */
+  min-width: max-content;
 }
 
 .marqueeItem {
-  font-family: 'Inter', 'Helvetica Neue', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 32px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #8a8a7a;
   white-space: nowrap;
-  padding: 0 28px;
 }
 
 .marqueeDot {
+  display: block;
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background-color: #8a8a7a;
+  background: var(--accent);
   flex-shrink: 0;
 }
 
 @keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
