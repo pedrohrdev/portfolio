@@ -4,7 +4,7 @@ function Contato() {
 
     return (
 
-        <section className={styles.contatoContainer}>
+        <section className={styles.contatoContainer} id='contact'>
 
             <div className={styles.contatoContent}>
                 

@@ -4,7 +4,7 @@ function About() {
 
     return (
 
-        <section className={styles.aboutContainer}>
+        <section className={styles.aboutContainer} id='about'>
             <div className={styles.aboutContent}>
 
                 <h2>SOBRE MIM</h2>
