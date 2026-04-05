@@ -33,6 +33,24 @@
 
 }
 
+@media (min-width: 767px) {
+
+    .contatoContent h2 {
+        font-size: 3.5rem;
+    }
+
+    .contatoContent h2 .highlight {
+        font-size: 0;
+    }
+
+    .contatoContent h2 .highlight::before {
+        content: "trabalhar \A juntos.";
+        font-size: 3.5rem;
+        color: var(--accent);
+        white-space: pre;
+    }
+}
+
 .contatoLinks {
     display: flex;
     flex-direction: column;
@@ -145,6 +163,7 @@
     line-height: 1.4;
 }
 
+
 @media (min-width: 1023px) {
 
     .contatoContent h3 {
@@ -152,7 +171,14 @@
     }
 
     .contatoContent h2 {
-        font-size: 3.5rem;
+        font-size: 4.5rem;
     }
+        .contatoContent h2 .highlight {
+            font-size: 0;
+        }   
+
+    .contatoContent h2 .highlight::before { 
+        font-size: 4.5rem;
+    }   
 
 }

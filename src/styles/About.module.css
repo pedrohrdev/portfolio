@@ -109,3 +109,26 @@
 .aboutMePhoto {
   display: none;
 }
+
+@media(min-width: 374px) {
+  .aboutContainer {
+    padding: 80px 48px;
+    text-align: left;
+  }
+}
+
+@media(min-width: 767px) {
+
+  .aboutContainer {
+    padding: 80px 84px;
+  }
+
+}
+
+@media(min-width: 1024px) {
+  .aboutHeadline {
+    font-size: 67px;
+
+  }
+
+}
