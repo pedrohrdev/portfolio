@@ -15,3 +15,96 @@
     opacity: 0.9;
 
 }
+
+.aboutContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+}
+
+.aboutContent {
+  max-width: 960px;
+  width: 100%;
+}
+
+.aboutContent h2 {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: #8a9a8a;
+  text-transform: uppercase;
+  margin: 0 0 28px 0;
+}
+
+.aboutHeadline {
+  font-size: clamp(40px, 7vw, 72px);
+  font-weight: 800;
+  line-height: 1.05;
+  color: #f0ede6;
+  margin: 0 0 32px 0;
+}
+
+.aboutHeadline .highlight {
+  color: var(--accent);
+}
+
+.aboutDescription {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #8a9a8a;
+  max-width: 520px;
+  margin: 0 0 16px 0;
+}
+
+.aboutDescription strong {
+  color: #f0ede6;
+  font-weight: 600;
+}
+
+.aboutInfo {
+      background: rgba(255, 255, 255, 0.055);
+  backdrop-filter: blur(16px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-top: 48px;
+  max-width: 480px;
+}
+
+.aboutInfo > div {
+  border: 1px solid #6a746a;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.aboutInfo > div span:first-child {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.aboutInfo > div p {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #8a9a8a;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.prankCoffe {
+  font-size: 42px !important;
+  font-weight: 800;
+  color: #c8f135 !important;
+  line-height: 1;
+  font-style: italic;
+}
+
+.aboutMePhoto {
+  display: none;
+}

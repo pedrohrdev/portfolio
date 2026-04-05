@@ -144,3 +144,12 @@
     color: rgb(143, 143, 141);
     line-height: 1.4;
 }
+
+@media (min-width: 1023px) {
+
+    h3 {
+        font-size: 1rem;
+        font-weight: 200;
+    }
+
+}
