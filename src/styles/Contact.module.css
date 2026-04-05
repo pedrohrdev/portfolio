@@ -147,9 +147,12 @@
 
 @media (min-width: 1023px) {
 
-    h3 {
+    .contatoContent h3 {
         font-size: 1rem;
-        font-weight: 200;
+    }
+
+    .contatoContent h2 {
+        font-size: 3.5rem;
     }
 
 }
