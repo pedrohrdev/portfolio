@@ -1,59 +1,102 @@
 .nav {
-  position: fixed; top: 0; left: 0; right: 0;
-  z-index: 100;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 28px 60px;
-  backdrop-filter: blur(0);
-  transition: background .3s, backdrop-filter .3s, padding .3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; 
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 28px var(--nav-px, 60px);
+
+  will-change: padding, background, backdrop-filter;
+  transition:
+    background 0.3s ease,
+    backdrop-filter 0.3s ease,
+    padding 0.3s ease;
 }
 
 .scrolled {
   background: rgba(10, 10, 10, 0.85);
   backdrop-filter: blur(16px);
-  padding: 18px 60px;
+  -webkit-backdrop-filter: blur(16px);
+  padding: 18px var(--nav-px, 60px);
   border-bottom: 1px solid var(--border);
 }
 
 .navLogo {
-  font-size: 1.1rem; font-weight: 700; letter-spacing: -.02em;
-  color: var(--fg); text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--fg);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
 }
 
-.navLogo span { color: var(--accent); }
+.navLogo:hover {
+  opacity: 0.75;
+}
+
+.navLogo span {
+  color: var(--accent);
+}
 
 .navLinks {
-  display: flex; gap: 36px; align-items: center;
+  display: flex;
+  gap: 36px;
+  align-items: center;
 }
 
 .navLinks a {
-  color: var(--muted); text-decoration: none;
-  font-size: .82rem; font-weight: 500; letter-spacing: .06em;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  transition: color .2s;
+  transition: color 0.2s ease;
 }
 
-.navLinks a:hover { color: var(--fg); }
+.navLinks a:hover {
+  color: var(--fg);
+}
 
 .navCta {
   padding: 9px 22px;
   border: 1px solid var(--border);
   border-radius: 100px;
-  background: transparent;
-  color: var(--fg) !important;
-  transition: background .2s, border-color .2s !important;
+  color: var(--fg);
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .navCta:hover {
-  background: var(--accent) !important;
-  color: #000 !important;
-  border-color: var(--accent) !important;
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
 }
 
+/* ── Responsivo ── */
+
 @media (max-width: 900px) {
-  .nav { padding: 24px 28px; }
-  .scrolled { padding: 18px 28px; }
+  .nav {
+    --nav-px: 28px;
+  }
 }
 
 @media (max-width: 580px) {
-  .navLinks { display: none; }
+  .navLinks {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav {
+    transition: none;
+    will-change: auto;
+  }
 }

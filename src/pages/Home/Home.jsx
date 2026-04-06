@@ -1,3 +1,4 @@
+import Navbar from '../../components/Navbar';
 import Hero from '../../components/Hero';
 import Marquee from '../../components/Marquee';
 import About from '../../components/About';
@@ -7,13 +8,19 @@ function Home() {
   return (
     <>
 
-      <Hero />
+      <Navbar />
 
-      <Marquee />
+      <main>
 
-      <About />
+        <Hero />
 
-      <Contato />
+        <Marquee />
+
+        <About />
+
+        <Contato />
+
+      </main>
 
     </>
   )
