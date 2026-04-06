@@ -1,49 +1,57 @@
 import Navbar from './Navbar';
-import styles from '../styles/Hero.module.css'
+import styles from '../styles/Hero.module.css';
 
 function Hero() {
 
-    return (
-        <div className={styles.heroContainer}>
-            <section className={styles.heroContent}>
+  return (
 
-                <Navbar />
+    <section className={styles.hero}>
 
-                <div className={styles.heroTag}>Disponível para novos projetos</div>
+      <Navbar />
+
+      <div className={styles.heroTag} aria-label="Disponível para novos projetos">
+
+        <span className={styles.heroTagDot} aria-hidden="true" />
+        Disponível para novos projetos
+
+      </div>
+
+      <h1 className={styles.titulo}>
+
+        Olá, eu me chamo{' '}
+        <em className={styles.nome}>Pedro</em>
+
+      </h1>
+
+      <p className={styles.cargo} aria-label="Dev Fullstack">
+
+        Dev Fullstack.
+
+      </p>
+
+    <div className={styles.heroBottom}>
+
+        <p className={styles.heroDesc}>
+          Construo{' '}
+          <strong className={styles.experiencia}>experiências digitais</strong>{' '}
+          que unem design e código. Focado em criar sistemas escaláveis
+          e de alta performance, com uma abordagem centrada no usuário.
+
+        </p>
 
 
-                <div className={styles.titleHeroContainer}>
+        <div className={styles.heroScroll} aria-hidden="true">
 
+          <div className={styles.heroScrollLine} />
 
-                    <h1 className={styles.titulo}>
-                        Olá, eu me <br /> chamo  <span className={styles.nome}>Pedro</span> 
-                    </h1>
-
-                    <h2 className={styles.cargo}>Dev Fullstack.</h2>
-
-                </div>
-
-                <div className={styles.heroBottom}>
-
-                    <p className={styles.heroDesc}>
-                        Construo  <span className={styles.experiencia}>experiências digitais </span>
-                        que unem design e código. Focado em criar sistemas escaláveis
-                        e de alta performance, com uma abordagem centrada no usuário.
-                    </p>
-
-                    <div className={styles.heroScroll}>
-                        <div className={styles.heroScrollLine} />
-                        <span>Scroll</span>
-                    </div>
-
-                </div>
-
-            </section>
+          <span>Scroll</span>
 
         </div>
 
-    );
+      </div>
 
+    </section>
+  );
 }
 
 export default Hero;
