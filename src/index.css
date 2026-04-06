@@ -25,7 +25,7 @@ body {
   background: var(--bg);
   color: var(--fg);
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* GRAIN */

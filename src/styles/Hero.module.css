@@ -58,6 +58,7 @@
   will-change: transform, opacity;
   opacity: 0;
   animation: fadeUp 0.7s 0.55s forwards;
+  font-weight: 200;
 }
 
 .heroBottom {
