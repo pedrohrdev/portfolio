@@ -33,10 +33,8 @@ function Hero() {
 
         <p className={styles.heroDesc}>
           Construo{' '}
-          <strong className={styles.experiencia}>experiências digitais</strong>{' '}
-          que unem design e código. Focado em criar sistemas escaláveis
-          e de alta performance, com uma abordagem centrada no usuário.
-
+          <strong className={styles.experiencia}>sistemas rápidos escaláveis e bem projetados. </strong>
+           Focando em performance e arquitetura limpa.{' '}
         </p>
 
 

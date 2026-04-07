@@ -12,9 +12,9 @@ function Contato() {
 
                     <h3>CONTATO</h3>
 
-                    <h2>Vamos <span className={styles.highlight}>trabalhar juntos.</span></h2>
+                    <h2>Vamos <span className={styles.highlight}>trabalhar juntos?</span></h2>
 
-                    <p className={styles.contatoDescription}>Aberto para projetos freelance e oportunidades de trabalho.</p>
+                    <p className={styles.contatoDescription}>Respondo rápido. Se tiver uma ideia ou projeto, <br /> me chama. Aberto para projetos freelance e oportunidades de trabalho.</p>
 
                     <div className={styles.contatoLinks}>
 

@@ -44,7 +44,7 @@
     }
 
     .contatoContent h2 .highlight::before {
-        content: "trabalhar \A juntos.";
+        content: "trabalhar \A juntos?";
         font-size: 3.5rem;
         color: var(--accent);
         white-space: pre;
