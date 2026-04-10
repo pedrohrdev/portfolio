@@ -4,6 +4,7 @@ import Marquee from '../../components/Marquee';
 import About from '../../components/About';
 import Skills from '../../components/Skills';
 import Contato from '../../components/Contato';
+import Footer from '../../components/Footer';
 
 function Home() {
   return (
@@ -22,6 +23,8 @@ function Home() {
         <Skills />
 
         <Contato />
+
+        <Footer />
 
       </main>
 
